@@ -1,6 +1,8 @@
 # Deploy Your ABP Framework Angular Project to Azure Kubernetes Service (AKS)
 
-In my previous article on [deploying an ABP Framework Angular project to Azure App Service](https://docs.abp.io/en/abp/latest/Deployment/Azure-App-Service), I talked about how ABP Mvc project can be easily deployed to Azure App Service. Now I will show how we can deploy to kubernetes environment, which looks a bit more complex but is more preferred for production, using helm chart.
+![ABP Framework Angular Project](abp-angular-aks-helm.png)
+
+In my previous article on [deploying an ABP Framework Mvc project to Azure App Service](https://docs.abp.io/en/abp/latest/Deployment/Azure-App-Service), I talked about how ABP Mvc project can be easily deployed to Azure App Service. Now I will show how we can deploy to kubernetes environment, which looks a bit more complex but is more preferred for production, using a Helm chart.
 
 ### Getting Started with ABP Framework Angular and Azure Kubernetes Service
 
@@ -63,11 +65,11 @@ You can find the helm chart in the https://github.com/skoc10/k8s_works/tree/main
 
 `Note:` You need to have nginx-ingress-controller and cert-manager installed for letsencrypt certificate in your kubernetes cluster.
 
-Now that you have Docker images for your ABP Framework Angular project and a Helm chart, you can proceed to deploy it to Azure Kubernetes Service. To do this, you need to create a new Azure Kubernetes Service resource and configure the `values-azure.yaml` file according to your needs. If you want, you can deploy a single helm with `demo/helm/k8s/deploy-staging.ps1` script you can deploy each chart separately.
+Now that you have Docker images for your ABP Framework Angular project and a Helm chart, you can proceed to deploy it to Azure Kubernetes Service. To do this, you need to create a new Azure Kubernetes Service resource and configure the `values-azure.yaml` file according to your needs. If you want, you can deploy a single Helm with `demo/helm/k8s/deploy-staging.ps1` script you can deploy each chart separately.
 
 ![Create Azure Kubernetes Service](create-azure-kubernetes-service.png)
 
-After deploying the helm chart, you can check the deployment status to confirm that the deployment was successful. You can also check the logs of the pods to see if there are any errors.
+After deploying the Helm chart, you can check the deployment status to confirm that the deployment was successful. You can also check the logs of the pods to see if there are any errors.
 
 ![Deploy Helm Chart](deploy-helm-chart.png)
 
